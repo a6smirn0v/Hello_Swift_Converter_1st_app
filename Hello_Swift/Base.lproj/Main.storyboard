@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -75,13 +76,74 @@
                     <view key="view" contentMode="scaleToFill" id="e25-Lw-Y23">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wAE-d8-R9Q" userLabel="ConverterView">
+                                <rect key="frame" x="36" y="60" width="303" height="86"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="fdO-iI-kVA">
+                                        <rect key="frame" x="8" y="8" width="287" height="70"/>
+                                        <subviews>
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="₽" borderStyle="roundedRect" placeholder="Рубли" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="HmU-Ay-Usj">
+                                                <rect key="frame" x="0.0" y="20" width="120.5" height="30"/>
+                                                <nil key="textColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                            </textField>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="A4B-vU-Pjv">
+                                                <rect key="frame" x="128.5" y="0.0" width="30" height="70"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bsN-Gb-xf8">
+                                                        <rect key="frame" x="0.0" y="0.0" width="30" height="30"/>
+                                                        <color key="backgroundColor" red="1" green="0.51289739999999995" blue="0.19917816159999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="30" id="Hqg-p2-7ek"/>
+                                                        </constraints>
+                                                        <state key="normal" title="--&gt;">
+                                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                        </state>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cdf-WK-LiF">
+                                                        <rect key="frame" x="0.0" y="40" width="30" height="30"/>
+                                                        <color key="backgroundColor" red="1" green="0.51289739999999995" blue="0.19917816159999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <state key="normal" title="&lt;--">
+                                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                        </state>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="€" borderStyle="roundedRect" placeholder="Евро" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="TO6-Wx-M5q">
+                                                <rect key="frame" x="166.5" y="20" width="120.5" height="30"/>
+                                                <nil key="textColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                            </textField>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="TO6-Wx-M5q" firstAttribute="width" secondItem="HmU-Ay-Usj" secondAttribute="width" id="l14-rg-OmD"/>
+                                        </constraints>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" red="0.94950812549999997" green="1" blue="0.5676313033" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="fdO-iI-kVA" firstAttribute="top" secondItem="wAE-d8-R9Q" secondAttribute="topMargin" id="2EG-8L-7xq"/>
+                                    <constraint firstItem="fdO-iI-kVA" firstAttribute="leading" secondItem="wAE-d8-R9Q" secondAttribute="leadingMargin" id="39f-xl-J2y"/>
+                                    <constraint firstAttribute="trailingMargin" secondItem="fdO-iI-kVA" secondAttribute="trailing" id="qtK-Tc-sSo"/>
+                                    <constraint firstAttribute="bottomMargin" secondItem="fdO-iI-kVA" secondAttribute="bottom" id="y07-kF-KwE"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="0.59511046180000005" green="0.97602163460000002" blue="0.37195659289999999" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="wAE-d8-R9Q" secondAttribute="trailing" constant="20" id="7zv-Mi-yOl"/>
+                            <constraint firstItem="wAE-d8-R9Q" firstAttribute="top" secondItem="NPH-3h-K6W" secondAttribute="bottom" constant="40" id="nRT-ku-SZw"/>
+                            <constraint firstItem="wAE-d8-R9Q" firstAttribute="leading" secondItem="e25-Lw-Y23" secondAttribute="leadingMargin" constant="20" id="tkx-u3-KCy"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="2" id="msU-AB-HlB"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dma-zQ-Z12" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="700" y="483"/>
+            <point key="canvasLocation" x="700" y="482.60869565217394"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="qPl-Ro-Vkt">
