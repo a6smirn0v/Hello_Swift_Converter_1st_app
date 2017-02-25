@@ -8,14 +8,94 @@
 
 import UIKit
 
-class ConverterView: UIView {
 
-    /*
-    // Only override draw() if you perform custom drawing.
-    // An empty implementation adversely affects performance during animation.
-    override func draw(_ rect: CGRect) {
-        // Drawing code
-    }
-    */
+protocol ConverterViewDelegate: class {
+
+    func converterView(view: ConverterView, convertForward value:String)
+    
+    func converterView(view: ConverterView, convertBackward value:String)
+    
+
 
 }
+
+class ConverterView: UIView {
+
+    weak var delegate: ConverterViewDelegate?
+    
+    var toValue:String?{
+    
+        get{ return toTextField?.text}
+        set {fromTextFiels?.text = newValue}
+    
+    }
+    
+    
+    
+    var fromValue:String?{
+    
+        get{ return fromTextFiels?.text}
+        set {fromTextFiels?.text = newValue}
+    
+    
+    }
+    
+
+
+    
+    
+@IBOutlet private weak var toTextField: UITextField?
+@IBOutlet private weak var fromTextFiels: UITextField?
+    
+    
+    
+    @IBAction func forwardPressed(){
+    
+    delegate?.converterView(view: self, convertForward: fromValue!)
+    
+    }
+    
+    @IBAction func backwardPressed(){
+    
+        delegate?.converterView(view: self, convertBackward: toValue!)
+    
+    
+    }
+
+    
+   required  init?(coder aDecoder:NSCoder) {super.init(coder:aDecoder)
+    
+    setup()
+    
+    }
+    
+    private func setup(){
+    
+    self.layer.cornerRadius = 5
+self.clipsToBounds = true
+    
+    }
+    
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
