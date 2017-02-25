@@ -13,6 +13,9 @@
 		FA7224361E6166F400C2D743 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA7224351E6166F400C2D743 /* Assets.xcassets */; };
 		FA7224391E6166F400C2D743 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA7224371E6166F400C2D743 /* LaunchScreen.storyboard */; };
 		FA7224411E61700500C2D743 /* HelloSwiftViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7224401E61700500C2D743 /* HelloSwiftViewController.swift */; };
+		FA7224431E618D8C00C2D743 /* ConverterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7224421E618D8C00C2D743 /* ConverterViewController.swift */; };
+		FA7224451E618DD200C2D743 /* Converter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7224441E618DD200C2D743 /* Converter.swift */; };
+		FA7224471E618DF700C2D743 /* ConverterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7224461E618DF700C2D743 /* ConverterView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +27,9 @@
 		FA7224381E6166F400C2D743 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FA72243A1E6166F400C2D743 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FA7224401E61700500C2D743 /* HelloSwiftViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HelloSwiftViewController.swift; sourceTree = "<group>"; };
+		FA7224421E618D8C00C2D743 /* ConverterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConverterViewController.swift; sourceTree = "<group>"; };
+		FA7224441E618DD200C2D743 /* Converter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Converter.swift; sourceTree = "<group>"; };
+		FA7224461E618DF700C2D743 /* ConverterView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConverterView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,12 +65,23 @@
 				FA7224401E61700500C2D743 /* HelloSwiftViewController.swift */,
 				FA72242B1E6166F400C2D743 /* AppDelegate.swift */,
 				FA72242F1E6166F400C2D743 /* Main.storyboard */,
+				FA7224481E618E2800C2D743 /* Converter */,
 				FA7224351E6166F400C2D743 /* Assets.xcassets */,
 				FA7224371E6166F400C2D743 /* LaunchScreen.storyboard */,
 				FA72243A1E6166F400C2D743 /* Info.plist */,
 				FA7224321E6166F400C2D743 /* Hello_Swift.xcdatamodeld */,
 			);
 			path = Hello_Swift;
+			sourceTree = "<group>";
+		};
+		FA7224481E618E2800C2D743 /* Converter */ = {
+			isa = PBXGroup;
+			children = (
+				FA7224421E618D8C00C2D743 /* ConverterViewController.swift */,
+				FA7224441E618DD200C2D743 /* Converter.swift */,
+				FA7224461E618DF700C2D743 /* ConverterView.swift */,
+			);
+			name = Converter;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -143,6 +160,9 @@
 				FA72242C1E6166F400C2D743 /* AppDelegate.swift in Sources */,
 				FA7224411E61700500C2D743 /* HelloSwiftViewController.swift in Sources */,
 				FA7224341E6166F400C2D743 /* Hello_Swift.xcdatamodeld in Sources */,
+				FA7224471E618DF700C2D743 /* ConverterView.swift in Sources */,
+				FA7224431E618D8C00C2D743 /* ConverterViewController.swift in Sources */,
+				FA7224451E618DD200C2D743 /* Converter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
